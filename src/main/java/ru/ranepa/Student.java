@@ -6,7 +6,7 @@ import java.util.List;
 public class Student {
 
     private final String name;
-    // тут статик поле
+    static int id;
     private final long studentID;
     private int course;
     private State state;
@@ -20,7 +20,9 @@ public class Student {
         this.state = State.ACTIVE;
     }
 
-    // тут статик метод
+    public static Student create(String name){
+        return new Student(name);
+    }
 
     public String getName() {
         return name;
@@ -52,6 +54,7 @@ public class Student {
     private String report() {
         return "Студент: " + name + System.lineSeparator()
                 + "Оценки: " + grades + System.lineSeparator()
+                + "Состояние: " + state + System.lineSeparator()
                 + "Средний балл: " + average();
     }
 
