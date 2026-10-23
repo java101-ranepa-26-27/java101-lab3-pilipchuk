@@ -8,6 +8,7 @@ public class Main {
         student.getGrades().add(5);
         System.out.println(student.average());
         student.printReport();
+        University university = new University();
 
         // TODO: создать университет
         // TODO: зачислить 2–3 студентов и поставить оценки
