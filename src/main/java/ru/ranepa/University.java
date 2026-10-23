@@ -23,7 +23,7 @@ public class University {
 
     public void addGrades(long id, int grade){
         if (grade <2 || grade >5){
-            throw new IllegalArgumentException("Оценка от 2 до 5");
+            throw new IllegalArgumentException("Оценка строго от 2 до 5");
         }
         Student student = findStudentByID(id);
         if (student.getState() != State.ACTIVE) {
